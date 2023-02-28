@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>WebGL Demo</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
+      integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="webgl-demo.js" type="module" defer></script>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        width: 100%;
+      }
+      canvas {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+      .desc {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="desc">마우스 우클릭하면 큐브가 움직임</div>
+    <canvas id="glcanvas"></canvas>
+  </body>
+</html>
