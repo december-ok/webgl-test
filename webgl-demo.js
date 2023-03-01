@@ -38,8 +38,8 @@ window.onmousedown = (e) => {
 
     pointer.z -= 7;
 
-    console.log(e.clientX, e.clientY, pointer);
-    return false;
+    // console.log(e.clientX, e.clientY, pointer);
+    return;
   }
 };
 
@@ -130,6 +130,11 @@ function main() {
 
     boxDirection.x = pointer.x - boxPosition.x;
     boxDirection.z = pointer.z - boxPosition.z;
+
+    if (Math.abs(boxDirection.x) < 0.1 && Math.abs(boxDirection.z) < 0.1) {
+      boxDirection.x = 0;
+      boxDirection.z = 0;
+    }
 
     if (boxDirection.x !== 0 || boxDirection.z !== 0) {
       // make normalized vector
