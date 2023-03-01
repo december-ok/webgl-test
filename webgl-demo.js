@@ -33,8 +33,11 @@ window.onmousedown = (e) => {
     // set vector to pointer position
     mat2.set(vector, e.clientX, e.clientY);
 
-    pointer.x = (20 * (e.clientX - 700)) / 700;
-    pointer.z = (10 * (e.clientY - 400)) / 400;
+    const halfWidth = window.innerWidth / 2;
+    const halfHeight = window.innerHeight / 2;
+
+    pointer.x = (20 * (e.clientX - halfWidth)) / halfWidth;
+    pointer.z = (10 * (e.clientY - halfHeight)) / halfHeight;
 
     pointer.z -= 7;
 
